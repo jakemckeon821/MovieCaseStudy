@@ -8,9 +8,9 @@ This project is an exploratory data analysis of TMDB movies using the `tmdb_movi
 As streaming competition intensifies, understanding what makes a movie successful is more important than ever. With thousands of films available on platforms like Netflix, analyzing trends in movie performance—such as genre popularity, viewer ratings, production investments, and release timing—can uncover what drives engagement. These insights can help content creators, studios, and streaming services make data-driven decisions about which types of movies to invest in and promote.
 
 ## Goals
-Explore and understand the structure and content of the tmdb_movie_dataset.csv file
+Explore and understand the structure and content of the `tmdb_movie_dataset.csv` file
 
-Analyze key movie attributes such as average voter rating, release date, revenue, runtime, budget, genre, and production companies
+Analyze key movie attributes such as `average_voter_rating`, `release_date`, `revenue`, `runtime`, `budget`, `genre`, and `production companies`
 
 Identify the most popular genres, high-performing production companies, and trends in budget vs. revenue
 
@@ -37,12 +37,6 @@ File: `tmdb_movie_dataset.csv`
 
 Source: [TMDB Movie Dataset](https://www.kaggle.com/datasets/asaniczka/tmdb-movies-dataset-2023-930k-movies)
 
-
-## Getting Started
-The very first step before was finding the dataset. I searched for movie datasets on kaggle and found one that is reliable
-
-I downloaded the dataset and uploaded it to `BigQuery` where I will be using `SQL`
-
 ## Ask
 ### Here is where we will be defining the problem
 The goal of this analysis is to understand the key factors that drive engagement and success for movies. 
@@ -56,6 +50,8 @@ This includes:
 - Exploring the relationship between average vote, revenue, and other indicators of popularity and success
 
 - Gaining insights into what characteristics are most commonly found in successful films
+
+**Our goal is to find data that can help us resolve these and turn them into actionable insights**
 
 ## Prepare
 ### Gathering and ensuring the quality of the data
@@ -81,15 +77,41 @@ For this project, we are focusing on the following key columns:
 
 `production_companies` – Studios or companies involved in producing the movie
 
+**We have prepared the data by:**
+
+- Downloading the `tmdb_movie_dataset.csv` file
+
+- The file size was originally too large for BigQuery, with over 1 million movies listed
+
+- Removed many listed movies so I could upload the file to BigQuery, but there are still over 150,000 movies before cleaning
+
 ## Process
 ### Clean, transform, and prepare the data for analysis
-Ensure there are no missing or null values in key columns like `release_date`, `genre`, and `title`.
+- Ensure there are no missing or null values in key columns like `release_date`, `genre`, and `title`.
 
-Ensure all numerical fields are properly formatted and categorized.
+- Ensure all numerical fields are properly formatted and categorized.
 
-Ensure that the dataset does not contain duplicate entries for the same title or year.
+- Ensure that the dataset does not contain duplicate entries for the same title or year.
 
-Standardize text fields like `release_date` to ensure consistency.
+- Standardize text fields like `release_date` to ensure consistency.
+
+**We started to process the data by:**
+
+- Cleaning the data. We are removing duplicates, null values, outliers, and unrealistic values
+
+![Removing duplicates](URL)
+
+We find out that there are many duplicate movie titles
+![Removing null values](URL)
+![Removing outliers/ unrealistic values]()
+
+
+
+
+
+
+
+
 
 ## Analyze
 ### Examine the data using techniques and tools to identify patterns and insights
