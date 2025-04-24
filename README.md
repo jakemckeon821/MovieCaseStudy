@@ -77,6 +77,8 @@ For this project, we are focusing on the following key columns:
 
 `production_companies` – Studios or companies involved in producing the movie
 
+[Movie Attributes](FieldNames.png)
+
 **We have prepared the data by:**
 
 - Downloading the `tmdb_movie_dataset.csv` file
@@ -99,9 +101,9 @@ For this project, we are focusing on the following key columns:
 
 - Cleaning the data. We are removing duplicates, null values, outliers, and unrealistic values
 
-![Removing duplicates](URL)
+![Removing duplicates](DuplicateMovies.png)
 
-We find out that there are many duplicate movie titles
+We find out that there are over 24,000 movie title duplicates!
 ![Removing null values](URL)
 ![Removing outliers/ unrealistic values]()
 
