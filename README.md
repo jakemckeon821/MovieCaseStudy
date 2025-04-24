@@ -1,35 +1,149 @@
-# Netflix Case Study
+# Movies Case Study
 By Jake McKeon
 
 ## Introduction
-This project is an exploratory data analysis of Netflix's content using the `netflix_titles.csv` file. The dataset includes meta data about all the TV shows and Movies currently available on Netflix.
+This project is an exploratory data analysis of TMDB movies using the `tmdb_movie_dataset.csv` file. The dataset includes meta data of over 150,000 movies!
 
 ## Significance
-As streaming competition continues to grow, understanding what content drives engagement can help identify key trends in the entertainment industry.
+As streaming competition intensifies, understanding what makes a movie successful is more important than ever. With thousands of films available on platforms like Netflix, analyzing trends in movie performance—such as genre popularity, viewer ratings, production investments, and release timing—can uncover what drives engagement. These insights can help content creators, studios, and streaming services make data-driven decisions about which types of movies to invest in and promote.
 
 ## Goals
-Learn all about the netflix_data.csv file
+Explore and understand the structure and content of the tmdb_movie_dataset.csv file
 
-Figure out most popular genres, countries, directors, cast members and more through data analysis
+Analyze key movie attributes such as average voter rating, release date, revenue, runtime, budget, genre, and production companies
 
-This file contains all TV Shows and Movies meta data on Netflix, which is updated every month
+Identify the most popular genres, high-performing production companies, and trends in budget vs. revenue
+
+Understand how factors like runtime and release timing correlate with audience engagement and success
+
 
 ## Tools and Skills Involved
 This project was completed using:
 
-R - for data cleaning, analysis, and visualization
+`R` - for data cleaning, analysis, and visualization
 
-SQL - for querying and exploring the dataset
+`RStudio` - as the IDE for working with R
 
-RStudio - as the IDE for working with R
+`SQL` - for querying and exploring the dataset
 
-Markdown - for documenting the analysis
+`BigQuerry` - for querying and exploring large datasets
 
-GitHub - for version control and sharing work
+`Markdown` - for documenting the analysis
+
+`GitHub` - for version control and sharing work
 
 ## Dataset
-File: `netflix_titles.csv`
+File: `tmdb_movie_dataset.csv`
 
-Source: [Netflix Dataset on Kaggle](https://www.kaggle.com/datasets/shivamb/netflix-shows)
+Source: [TMDB Movie Dataset](https://www.kaggle.com/datasets/asaniczka/tmdb-movies-dataset-2023-930k-movies)
+
 
 ## Getting Started
+The very first step before was finding the dataset. I searched for movie datasets on kaggle and found one that is reliable
+
+I downloaded the dataset and uploaded it to `BigQuery` where I will be using `SQL`
+
+## Ask
+### Here is where we will be defining the problem
+The goal of this analysis is to understand the key factors that drive engagement and success for movies. 
+
+This includes:
+
+- Identifying the most popular movie genres across all platforms
+
+- Analyzing how factors such as release year, budget, runtime, and production companies influence a movie’s performance
+
+- Exploring the relationship between average vote, revenue, and other indicators of popularity and success
+
+- Gaining insights into what characteristics are most commonly found in successful films
+
+## Prepare
+### Gathering and ensuring the quality of the data
+The dataset used for this analysis is tmdb_movie_dataset.csv, which contains metadata on a wide range of movies, including both commercial and critical performance indicators. The data was uploaded to BigQuery for exploration and analysis using SQL.
+
+For this project, we are focusing on the following key columns:
+
+`id` – Unique identifier for each movie
+
+`title` – Title of the movie
+
+`vote_average` – Average user rating (on a scale from 0 to 10)
+
+`release_date` – Official release date of the movie
+
+`revenue` – Total worldwide box office revenue
+
+`runtime` – Length of the movie (in minutes)
+
+`budget` – Estimated production budget
+
+`genre` – Primary genres associated with the movie
+
+`production_companies` – Studios or companies involved in producing the movie
+
+## Process
+### Clean, transform, and prepare the data for analysis
+Ensure there are no missing or null values in key columns like `release_date`, `genre`, and `title`.
+
+Ensure all numerical fields are properly formatted and categorized.
+
+Ensure that the dataset does not contain duplicate entries for the same title or year.
+
+Standardize text fields like `release_date` to ensure consistency.
+
+## Analyze
+### Examine the data using techniques and tools to identify patterns and insights
+Using SQL and R, perform initial data exploration and summary statistics.
+
+- **Identify Popular Genres** 
+
+   Analyze the frequency of each genre in the dataset to determine which types of movies are most commonly produced and potentially most popular. This provides insight into audience preferences and industry trends.
+
+- **Release year distribution**
+ 
+    Visualize how the number of movies released each year has changed over time. This can help highlight shifts in production volume and identify periods of industry growth or decline.
+
+- **Budget and Revenue Trends**
+  
+  Explore how movie budgets and box office revenues vary across genres and over time. This can reveal which genres tend to be high-investment and which generate the highest returns.
+
+- **Production Companies Analysis**
+  
+  Determine which production companies are most active in the industry by analyzing how many movies each company has released and their associated revenue and vote averages.
+
+
+## Share
+### Communicate the findings and insights through reports and visuals
+- **Most Popular Genres**
+
+Visualize the most frequently occurring genres in the dataset and identify which genres dominate the movie landscape. This can help uncover audience preferences and industry trends.
+
+- **Impact of Release Year on Engagement**
+
+Show how movie release years correlate with vote averages, revenue, and other success metrics. Analyze how production trends change over time and their potential impact on engagement.
+
+- **Production Company Success**
+
+  Analyze the performance of movies by production company, focusing on metrics such as revenue, budget, and vote average. This helps identify leading studios and trends in successful movie production.
+
+## Act
+### Implement solutions or make decisions based on analysis
+- **Key Takeaways**
+- **Actionable Recommendations**
+- **Content Strategy**
+
+- Content production strategies, focusing on certain genres or targeting specific regions.
+
+- **Marketing**
+
+- Propose marketing campaigns based on high-performance content types or partnerships with popular directors/ genres.
+
+
+
+
+
+
+
+
+
+
