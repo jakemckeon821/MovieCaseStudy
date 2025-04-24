@@ -99,14 +99,26 @@ For this project, we are focusing on the following key columns:
 
 - Standardize text fields like `release_date` to ensure consistency
 
-**We started to process the data by:**
+**We start to process the data by:**
 
 - Cleaning the data. We are removing duplicates, null values, outliers, and unrealistic values
 
 ![Removing duplicates](DuplicateMovies.png)
 
-We find out that there are over 24,000 movie title duplicates!
-![Removing null values](URL)
+We find out that there are over **24,000** movie titles that are duplicates
+
+We then count the amount of `distinct` movie titles and find that there are **134,836**. This includes movie data with null values
+
+![Removing null values](UniqueNonNullMovies.png)
+
+This shows that we are counting the number of `distinct` movies in the dataset where each attribute is **not null**
+
+You can see our number of movies has decreased again to **134,644**
+
+We count using the movie `title` instead of the `id` because each row (including duplicates) has its own id
+
+Here we can see
+
 ![Removing outliers/ unrealistic values]()
 
 
