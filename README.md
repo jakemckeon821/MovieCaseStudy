@@ -1,20 +1,27 @@
 # Movies Case Study
 By Jake McKeon
 
+
+
 ## Introduction
 This project is an exploratory data analysis of TMDB movies using the `tmdb_movie_dataset.csv` file. The dataset includes meta data of over 150,000 movies!
+
+
 
 ## Significance
 As streaming competition intensifies, understanding what makes a movie successful is more important than ever. With thousands of films available on platforms like Netflix, analyzing trends in movie performance—such as genre popularity, viewer ratings, production investments, and release timing—can uncover what drives engagement. These insights can help content creators, studios, and streaming services make data-driven decisions about which types of movies to invest in and promote
 
+
+
 ## Goals
 Explore and understand the structure and content of the `tmdb_movie_dataset.csv` file
 
-Analyze key movie attributes such as `average_voter_rating`, `release_date`, `revenue`, `runtime`, `budget`, `genre`, and `production companies`
+Analyze key movie attributes such as `average_voter_rating`, `release_date`, `revenue`, `runtime`, `budget`, and `genre`
 
 Identify the most popular genres, high-performing production companies, and trends in budget vs. revenue
 
 Understand how factors like runtime and release timing correlate with audience engagement and success
+
 
 
 ## Tools and Skills Involved
@@ -32,10 +39,16 @@ This project was completed using:
 
 `GitHub` - for version control and sharing work
 
+`Tableau` - for data visualization
+
+
+
 ## Dataset
 File: `tmdb_movie_dataset.csv`
 
 Source: [TMDB Movie Dataset](https://www.kaggle.com/datasets/asaniczka/tmdb-movies-dataset-2023-930k-movies)
+
+
 
 ## Ask
 ### Here is where we will be defining the problem
@@ -52,6 +65,8 @@ This includes:
 - Gaining insights into what characteristics are most commonly found in successful films
 
 **Our goal is to find data that can help us resolve these and turn them into actionable insights**
+
+
 
 ## Prepare
 ### Gathering and ensuring the quality of the data
@@ -75,8 +90,6 @@ For this project, we are focusing on the following key columns:
 
 `genre` – Primary genres associated with the movie
 
-`production_companies` – Studios or companies involved in producing the movie
-
 ![Movie Attributes](FieldNames.png)
 
 **We have prepared the data by:**
@@ -88,6 +101,8 @@ For this project, we are focusing on the following key columns:
 - Removed many listed movies so I could upload the file to BigQuery, but there are still over 150,000 movies before cleaning
 
 - The official number of movies in the dataset right now is **150,392**. This is before any processing
+
+
 
 ## Process
 ### Clean, transform, and prepare the data for analysis
@@ -119,13 +134,11 @@ We count using the movie `title` instead of the `id` because each row (including
 
 Here we can see
 
-![Removing outliers/ unrealistic values]()
+![Removing Uunrelaistic values](RealisticValues.png)
 
+This looks very similar to the previous query. Even though the values are not null, we are making sure that the values fall into the appropriate range and have no unrealistic values like a `vote_average` below 0 or above 10, and `revenue`, `runtime`, and `budget` are not negative values
 
-
-
-
-
+Luckiily we get the same number of movies at **134,644**
 
 
 
