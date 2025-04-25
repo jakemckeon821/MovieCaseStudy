@@ -6,7 +6,7 @@ By Jake McKeon
 ## Introduction
 This project is an exploratory data analysis of TMDB movies using the `tmdb_movie_dataset.csv` file. The dataset includes meta data of over 150,000 movies!
 
-
+![IntroPage](Page1.png)
 
 ## Significance
 As streaming competition intensifies, understanding what makes a movie successful is more important than ever. With thousands of films available on platforms like Netflix, analyzing trends in movie performance—such as genre popularity, viewer ratings, production investments, and release timing—can uncover what drives engagement. These insights can help content creators, studios, and streaming services make data-driven decisions about which types of movies to invest in and promote
@@ -80,6 +80,8 @@ For this project, we are focusing on the following key columns:
 
 `vote_average` – Average user rating (on a scale from 0 to 10)
 
+`vote_count` - How many people rate each movie
+
 `release_date` – Official release date of the movie
 
 `revenue` – Total worldwide box office revenue
@@ -149,6 +151,12 @@ Using SQL and R, perform initial data exploration and summary statistics.
 - **Identify Popular Genres** 
 
    Analyze the frequency of each genre in the dataset to determine which types of movies are most commonly produced and potentially most popular. This provides insight into audience preferences and industry trends
+  ![SuccessfulGenres]()
+
+  ![HighestRated](HighestRatedMovies.png)
+  This shows the top 25 highest rated movies with atleast 500 votes, as there were many with a 10.0 rating while having less than 10 votes. This gives us more accurate information.
+
+  I have gone through many metrics like comparing runtime and budget to genre, release dates and many more. This is dozens of screenshots so I will not include them in this document.
 
 - **Release year distribution**
  
