@@ -148,10 +148,32 @@ Luckiily we get the same number of movies at **134,644**
 ### Examine the data using techniques and tools to identify patterns and insights
 Using SQL and R, perform initial data exploration and summary statistics.
 
+While going through this analysis, I ran into some roadblocks.
+
+A main issue I had was figuring out the genre portion for the movies. Most of the movies had multiple genres related to the movie. This made it very difficult to figure out information and have it be accurate. I ended up having to take the first (main) genre from each movie and using that instead. This made the data much more accurate as it was difficult to 
+see results of data when most movies had the same main genres attached to them. I created a calculated field in tableau to find the first word in the genre category and use that one. In SQL, 
+
+
+## Share
+### Communicate the findings and insights through reports and visuals
+- **Most Popular Genres**
+  
+Visualize the most frequently occurring genres in the dataset and identify which genres dominate the movie landscape. This can help uncover audience preferences and industry trends
+
+- **Impact of Release Year on Engagement**
+
+Show how movie release years correlate with vote averages, revenue, and other success metrics. Analyze how production trends change over time and their potential impact on engagement
+
+- **Production Company Success**
+
+  Analyze the performance of movies by production company, focusing on metrics such as revenue, budget, and vote average. This helps identify leading studios and trends in successful movie production
+
 - **Identify Popular Genres** 
 
    Analyze the frequency of each genre in the dataset to determine which types of movies are most commonly produced and potentially most popular. This provides insight into audience preferences and industry trends
-  ![SuccessfulGenres]()
+  ![SuccessfulGenres](GenreVsRevenueBubble.png)
+   We are looking at a bubble chart showing revenue generated vs genre. As we can see in the visual, `action` movies generate the most revenue. There seems to be a main 4 or 5 genres, those being `action`, `adventure`, `comedy`, `drama`, and `animation`.
+
 
   ![HighestRated](HighestRatedMovies.png)
   This shows the top 25 highest rated movies with atleast 500 votes, as there were many with a 10.0 rating while having less than 10 votes. This gives us more accurate information.
@@ -169,21 +191,6 @@ Using SQL and R, perform initial data exploration and summary statistics.
 - **Production Companies Analysis**
   
   Determine which production companies are most active in the industry by analyzing how many movies each company has released and their associated revenue and vote averages
-
-
-## Share
-### Communicate the findings and insights through reports and visuals
-- **Most Popular Genres**
-  
-Visualize the most frequently occurring genres in the dataset and identify which genres dominate the movie landscape. This can help uncover audience preferences and industry trends
-
-- **Impact of Release Year on Engagement**
-
-Show how movie release years correlate with vote averages, revenue, and other success metrics. Analyze how production trends change over time and their potential impact on engagement
-
-- **Production Company Success**
-
-  Analyze the performance of movies by production company, focusing on metrics such as revenue, budget, and vote average. This helps identify leading studios and trends in successful movie production
 
 ## Act
 ### Implement solutions or make decisions based on analysis
